@@ -20,16 +20,14 @@ body {
     z-index: 10;
 }
 
-@media (min-width: 777px) {
-    .menu_list {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 388px;
-        height: 47px;
-        list-style: none;
-        padding-left: 0px;
-    }
+.menu_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 388px;
+    height: 47px;
+    list-style: none;
+    padding-left: 0px;
 }
 
 .header_logo {
@@ -63,6 +61,7 @@ body {
     border-radius: 39px;
     position: relative;
     z-index: 5;
+    margin-right: 28px;
 }
 
 .header_button_button {
@@ -70,14 +69,17 @@ body {
     color: #FFFFFF;
 }
 
-@media (max-width: 776px) {
+@media (max-width: 802px) {
 
     .menu_list {
         display: flex;
         position: relative;
         flex-direction: column;
+        align-items: flex-start;
         list-style: none;
         font-size: 30px;
+        margin-top: 150px;
+        margin-left: 20px;
     }
 
     .nav_link {
@@ -96,11 +98,10 @@ body {
     .burger_icon span,
     .burger_icon::before,
     .burger_icon::after {
-        left: 0;
+        right: 0;
         position: absolute;
         background-color: #FFFFFF;
         height: 10%;
-        width: 100%;
         transition: all 0.3s ease 0s;
     }
 
@@ -111,15 +112,33 @@ body {
 
     .burger_icon::before {
         left: 0;
+        width: 100%;
     }
 
     .burger_icon::after {
         bottom: 0;
+        width: 50%;
     }
 
     .burger_icon span {
         top: 50%;
-        transform: scale(1) translate(0px -50%);
+        transform: scale(1) translate(0px, -50%);
+        width: 75%;
+    }
+
+    .burger_icon._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+
+    .burger_icon._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    .burger_icon._active::after {
+        bottom: 50%;
+        width: 100%;
+        transform: rotate(45deg) translate(0px, 50%);
     }
 
     .menu_body {
@@ -128,20 +147,31 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(173, 134, 169, 0.9);
-        padding: 100px, 30px, 30px, 30px;
-        transform: left 0.3s ease 0s;
+        left: -100%;
+        background-color: rgba(136, 178, 211, 0.9);
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+        /*scrolling */
+    }
+
+    .menu_body._active {
+        left: 0;
+        ;
     }
 
     .menu_body::before {
         content: "";
         position: fixed;
         width: 100%;
-        top: 0;
-        left: 0;
         height: 119px;
         background: linear-gradient(230.95deg, #CB1AE8 -0.37%, #37BDA6 100%);
         z-index: 2;
+    }
+
+    .header_button {
+        width: 120px;
+        height: 52px;
+        margin-left: auto;
     }
 
 }
