@@ -12,6 +12,13 @@ section {
     margin: 50px 0px;
 }
 
+/* .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+} */
+
 /*---------------------------------------HEADER-----------------------------------------------*/
 .header {
     width: 100%;
@@ -136,19 +143,20 @@ section {
 
 .section_cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 1270px;
-    height: 615px;
+    width: 100%;
+    /* width: 1270px; */
+    min-height: 615px;
     margin: 0 auto;
 }
 
 .section_card {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 401px;
+    min-width: 401px;
     height: 440.62px;
     box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
@@ -315,6 +323,7 @@ section {
     font-size: 18px;
     margin: 0 auto;
     color: #5C5C5C;
+    font-family: 'Roboto';
 }
 
 .section5_cards {
@@ -327,6 +336,7 @@ section {
 }
 
 .section5_card {
+    width: 335px;
     border: 1px solid #DEDEDE;
     border-radius: 10px;
 }
@@ -335,6 +345,62 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    gap: 30px;
+}
+
+.section5_card_cost {
+    display: flex;
+    flex-direction: row;
+}
+
+.card_cost {
+    font-weight: 900;
+    font-size: 55px;
+    color: #30D7BA;
+}
+
+.card_cost1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.dollar {
+    font-weight: 700;
+    font-size: 30px;
+    color: #30D7BA;
+}
+
+.per {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 12px;
+    color: #5C5C5C;
+}
+
+.section5_card_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 180%;
+}
+
+.section5_card_button {
+    width: 251px;
+    height: 52px;
+    border-radius: 39px;
+    background: #03D6F3;
+    box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
+}
+
+.section5_card_button_btn {
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 /*---------------------------------------Section_6-----------------------------------------------*/
